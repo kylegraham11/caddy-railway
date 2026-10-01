@@ -17,6 +17,9 @@
     log {
         format json
     }
+
+    reverse_proxy * client:3000
+
     # api routes go to backend service over private networking
     handle /api/* {
         reverse_proxy light-the-lamp-leagues.railway.internal:3000
