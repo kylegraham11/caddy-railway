@@ -22,7 +22,7 @@
 
     # api routes go to backend service over private networking
     handle /api/* {
-        reverse_proxy light-the-lamp-leagues.railway.internal:3000
+        reverse_proxy light-the-lamp-leagues:8080
     }
 
      # Everything else serves the SPA
