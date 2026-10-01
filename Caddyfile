@@ -13,12 +13,12 @@
     }
 }
 
-:{$PORT:3000} {
+:8080 {
     log {
         format json
     }
 
-    reverse_proxy * client:3000
+    reverse_proxy * client:8080
 
     # api routes go to backend service over private networking
     handle /api/* {
